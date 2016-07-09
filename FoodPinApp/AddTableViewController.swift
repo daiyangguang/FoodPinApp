@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class AddTableViewController: UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -17,21 +18,37 @@ class AddTableViewController: UITableViewController, UIImagePickerControllerDele
     @IBOutlet weak var locationTextField: UITextField!
     @IBOutlet weak var yesButton: UIButton!
     @IBOutlet weak var noButton: UIButton!
+    var restaurant: Restaurant!
     
     var isVisited: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
     @IBAction func saveAction(sender: UIBarButtonItem) {
+        
+        // coreData
+        if let managedObjectContext = (UIApplication.sharedApplication().delegate as? AppDelegate)?.managedObjectContext {
+            restaurant = NSEntityDescription.insertNewObjectForEntityForName("Restaurant", inManagedObjectContext: managedObjectContext) as! Restaurant
+            restaurant.name = nameTextFiedl.text
+            restaurant.type = typeTextField.text
+            restaurant.location = locationTextField.text
+            restaurant.image = UIImagePNGRepresentation(imageView.image!)
+            restaurant.isVisited = isVisited
+            
+            do {
+                try managedObjectContext.save()
+            }
+            catch let error {
+                print("insert error: \(error)")
+                    
+            }
+            
+            
+            
+        }
         
         var errorField = ""
         if nameTextFiedl.text == "" {

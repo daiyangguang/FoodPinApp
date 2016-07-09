@@ -25,7 +25,7 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         tableView.separatorColor = UIColor(red:
             240.0/255.0, green: 240.0/255.0, blue: 240.0/255.0,
             alpha: 0.8)
-        restaurantImageView.image = UIImage(named: restaurant.image)
+        restaurantImageView.image = UIImage(data: restaurant.image)
     }
     @IBAction func close(segue: UIStoryboardSegue) {
         
@@ -63,7 +63,7 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
             cell.mapBtn.hidden = false
         case 3:
             cell.fieldLable.text = "Been Here"
-            cell.valueLabel.text = restaurant.isVisited ? "Yes, I’ve been here before" : "NO"
+            cell.valueLabel.text = restaurant.isVisited.boolValue ? "Yes, I’ve been here before" : "NO"
         default:
             cell.fieldLable.text = ""
             cell.valueLabel.text = ""
