@@ -126,10 +126,10 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
     //            tableView.deselectRowAtIndexPath(indexPath, animated: false)
     //    }
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            restaurants.removeAtIndex(indexPath.row)
-        }
-        tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+//        if editingStyle == .Delete {
+//            restaurants.removeAtIndex(indexPath.row)
+//        }
+//        tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
     }
     override func tableView(tableView: UITableView, titleForDeleteConfirmationButtonForRowAtIndexPath indexPath: NSIndexPath) -> String? {
         return "删除"
@@ -156,8 +156,18 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
         shareAction.backgroundColor = UIColor.lightGrayColor()
         //delete
         let deleteAction = UITableViewRowAction(style: .Default, title: "删除") { (action, indexPath) -> Void in
-            self.restaurants.removeAtIndex(indexPath.row)
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            if let managedObjectContext = (UIApplication.sharedApplication().delegate as? AppDelegate)?.managedObjectContext {
+                let restaurantToDelete = self.fetchResultController.objectAtIndexPath(indexPath) as! Restaurant
+                managedObjectContext.deleteObject(restaurantToDelete)
+                
+                do {
+                    try managedObjectContext.save()
+                }
+                catch let error {
+                    print("after delete error-----\(error)")
+                }
+                
+            }
             
         }
         
@@ -186,6 +196,7 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
             }
         default: tableView.reloadData()
         }
+        
         restaurants = controller.fetchedObjects as! [Restaurant]
         
     }
