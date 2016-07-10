@@ -13,6 +13,8 @@
 		AE8B2BB71D2E99C500AF0B18 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8B2BB61D2E99C500AF0B18 /* MapViewController.swift */; };
 		AE8B2BBE1D30F02200AF0B18 /* AddTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8B2BBD1D30F02200AF0B18 /* AddTableViewController.swift */; };
 		AE8B2BC11D31427D00AF0B18 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AE8B2BBF1D31427D00AF0B18 /* Model.xcdatamodeld */; };
+		AE8B2BE41D32960B00AF0B18 /* PageContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8B2BE31D32960B00AF0B18 /* PageContentViewController.swift */; };
+		AE8B2BE61D3298AA00AF0B18 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8B2BE51D3298AA00AF0B18 /* PageViewController.swift */; };
 		AED1E0FB1D2C909200BBAFA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED1E0FA1D2C909200BBAFA3 /* AppDelegate.swift */; };
 		AED1E1001D2C909200BBAFA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AED1E0FE1D2C909200BBAFA3 /* Main.storyboard */; };
 		AED1E1021D2C909200BBAFA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AED1E1011D2C909200BBAFA3 /* Assets.xcassets */; };
@@ -31,6 +33,8 @@
 		AE8B2BB61D2E99C500AF0B18 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		AE8B2BBD1D30F02200AF0B18 /* AddTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTableViewController.swift; sourceTree = "<group>"; };
 		AE8B2BC01D31427D00AF0B18 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		AE8B2BE31D32960B00AF0B18 /* PageContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentViewController.swift; sourceTree = "<group>"; };
+		AE8B2BE51D3298AA00AF0B18 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		AED1E0F71D2C909200BBAFA3 /* FoodPinApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPinApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AED1E0FA1D2C909200BBAFA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AED1E0FF1D2C909200BBAFA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -85,6 +89,8 @@
 				AE8B2BB21D2E8DDF00AF0B18 /* ReviewViewController.swift */,
 				AE8B2BB61D2E99C500AF0B18 /* MapViewController.swift */,
 				AE8B2BBD1D30F02200AF0B18 /* AddTableViewController.swift */,
+				AE8B2BE51D3298AA00AF0B18 /* PageViewController.swift */,
+				AE8B2BE31D32960B00AF0B18 /* PageContentViewController.swift */,
 				AED1E1141D2D4CAA00BBAFA3 /* Restaurant.swift */,
 				AED1E0FE1D2C909200BBAFA3 /* Main.storyboard */,
 				AED1E1011D2C909200BBAFA3 /* Assets.xcassets */,
@@ -175,8 +181,10 @@
 				AED1E1171D2E06D700BBAFA3 /* DetailTableViewCell.swift in Sources */,
 				AED1E1151D2D4CAA00BBAFA3 /* Restaurant.swift in Sources */,
 				AE8B2BB31D2E8DDF00AF0B18 /* ReviewViewController.swift in Sources */,
+				AE8B2BE61D3298AA00AF0B18 /* PageViewController.swift in Sources */,
 				AED1E10F1D2C979F00BBAFA3 /* RestaurantTableViewController.swift in Sources */,
 				AED1E1111D2CA84600BBAFA3 /* RestaurantTableViewCell.swift in Sources */,
+				AE8B2BE41D32960B00AF0B18 /* PageContentViewController.swift in Sources */,
 				AE8B2BBE1D30F02200AF0B18 /* AddTableViewController.swift in Sources */,
 				AED1E0FB1D2C909200BBAFA3 /* AppDelegate.swift in Sources */,
 				AE8B2BC11D31427D00AF0B18 /* Model.xcdatamodeld in Sources */,

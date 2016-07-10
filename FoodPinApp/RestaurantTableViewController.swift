@@ -40,6 +40,15 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        
+        if defaults.boolForKey("hasViewedWalkThrough") == false {
+            // add pageVC
+            if let pageViewController = storyboard?.instantiateViewControllerWithIdentifier("PageViewController") as? PageViewController {
+                presentViewController(pageViewController, animated: true, completion: nil)
+            }            
+        }
         //add searchBar
         searchController = UISearchController(searchResultsController: nil)
         searchController.searchResultsUpdater = self
