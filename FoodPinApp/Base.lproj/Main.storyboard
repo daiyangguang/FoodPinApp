@@ -35,11 +35,11 @@
             </objects>
             <point key="canvasLocation" x="946" y="-576"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Feed-->
         <scene sceneID="KcU-ad-qsT">
             <objects>
                 <navigationController id="lTj-kD-K9d" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" image="feed_tabicon" id="dFM-8h-ygq"/>
+                    <tabBarItem key="tabBarItem" title="Feed" image="feed_tabicon" id="dFM-8h-ygq"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="NtO-OF-nof">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

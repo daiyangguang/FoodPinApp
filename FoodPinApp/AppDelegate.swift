@@ -34,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UITabBar.appearance().tintColor = UIColor(red: 235/255, green: 75/255, blue: 27/255, alpha: 1.0) //item color
         UITabBar.appearance().barTintColor = UIColor.blackColor() //backgroundColor
-        
+        UITabBar.appearance().selectionIndicatorImage = UIImage(named: "tabitem_selected")
         return true
     }
 
