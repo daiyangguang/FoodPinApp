@@ -61,7 +61,6 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
         //customize searchBar
         searchController.searchBar.tintColor = UIColor.orangeColor()
         searchController.searchBar.placeholder = "Search your restaurant"
-        searchController.searchBar.prompt = "Quick Search"
         
         
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)

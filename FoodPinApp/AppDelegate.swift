@@ -30,6 +30,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIToolbar.appearance().barTintColor = UIColor(red: 237.0/255.0, green: 240.0/255.0, blue:
             243.0/255.0, alpha: 0.5)
         
+        //customTabbar
+        
+        UITabBar.appearance().tintColor = UIColor(red: 235/255, green: 75/255, blue: 27/255, alpha: 1.0) //item color
+        UITabBar.appearance().barTintColor = UIColor.blackColor() //backgroundColor
+        
         return true
     }
 
